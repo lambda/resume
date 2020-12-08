@@ -1,0 +1,98 @@
+/*
+ * Copyright 2020 Brian Campbell <lambda@continuation.org>
+ * Copyright 2013 Christophe-Marie Duquesne <chmd@chmd.fr>
+ *
+ * CSS for making a resume with pandoc. Inspired by moderncv.  Adapted
+ * from similar style from Christophe-Marie Duquesne, documented at
+ * https://blog.chmd.fr/editing-a-cv-in-markdown-with-pandoc.html.
+ *
+ * This CSS document is delivered to you under the CC BY-SA 3.0 License.
+ * https://creativecommons.org/licenses/by-sa/3.0/deed.en_US
+ */
+
+/* Whole document */
+:root {
+    --main-color: black;
+    --bg-color: white;
+    --highlight-color: #1d1eae;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 800px;
+    margin: auto;
+    background: var(--bg-color);
+    padding: 10px 10px 10px 10px;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-gap: 10px;
+    gap: 10px;
+}
+
+/* Title of the resume */
+h1 {
+    font-size: 55px;
+    text-align:center;
+    color: var(--highlight-color);
+    margin-bottom:15px;
+    grid-column: 1 / 3;
+}
+
+/* Titles of categories */
+h2 {
+    color: var(--highlight-color);
+    grid-column: 2;
+}
+
+/* Definitions */
+dl {
+    display: contents;
+}
+dt {
+    font-weight: bold;
+    grid-column: 1;
+}
+dd {
+    margin: unset;
+    margin-bottom: 8px;
+    grid-column: 2;
+}
+p {
+    margin-top:0;
+    margin-bottom:10px;
+}
+p:last-child {
+    margin-bottom: 0px;
+}
+
+/* Blockquotes */
+blockquote {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    grid-column: 1 / 3;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: var(--highlight-color);
+}
+a:hover, a:active {
+    background-color: var(--highlight-color);
+    color: var(--bg-color);
+    text-decoration: none;
+}
+
+/* Horizontal separators */
+hr {
+    border: .5px solid var(--main-color);
+    width: 100%;
+    grid-column: 1 / 3;
+    margin: 0;
+}
+
+em {
+    font-style: normal;
+    font-weight: bold;
+}
